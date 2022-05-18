@@ -48,6 +48,20 @@ class Linked_list:
                 temp = temp.next
 
     
-            
+L = linkedlist()
+n = node(10)
+L.head = n
+n1 = node(20)
+n.next = n1
+n2 = node(30)
+n1.next = n2
+n3= node(40)
+n2.next = n3
+n4= node(50)
+n3.next = n4
+L.delete_first()
+L.delete_last()
+L.delete_mid(2)
+L.display ()         
             
                 
