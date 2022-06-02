@@ -48,9 +48,31 @@ class Dll:
                 i + 1
             n.nref = newnode
             newnode.pref = n
-            
+    def delfirst(self):
+        if self.head is None:
+            print("Dll is empty")
+        else:
+            self.head = self.head.nref
+            self.head.pref.nref = None
+            self.head.pref = None
+    def dellast(self):
+        if self.head is None:
+             print("Dll is empty")
+        else:
+            n = self.head
+            while n.nref:
+                n = n.nref
+            n.pref.nref = None
+    
+                
 l = Dll()
-l.insertbegin(10)
 l.insertbegin(20)
+l.insertbegin(10)
 l.inserlast(30)
+l.inserlast(40)
+l.inserlast(50)
+l.inserlast(60)
+l.delfirst()
+l.dellast()
+l.dellast()
 l.display()
